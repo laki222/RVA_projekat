@@ -1,0 +1,6 @@
+C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\bin\Debug\Common.dll
+C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\bin\Debug\Common.pdb
+C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.dll
+C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.pdb
