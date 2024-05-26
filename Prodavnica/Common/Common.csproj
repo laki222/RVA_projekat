@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICloneable.cs" />
     <Compile Include="IRacunService.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\IUser.cs" />

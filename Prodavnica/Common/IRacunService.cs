@@ -8,6 +8,14 @@ using Common.Model;
 
 namespace Common
 {
+    public enum LogInInfo
+    {
+        WrongUserOrPass,
+        AlreadyConnected,
+        Sucess
+    }
+
+
     [ServiceContract]
     public interface IRacunService
     {
@@ -24,10 +32,17 @@ namespace Common
 
         [OperationContract]
 
-        bool DeleteRacun();
+        bool DeleteRacun(string name);
 
         [OperationContract]
         bool SearchRacun();
+
+        [OperationContract]
+        LogInInfo LogIn(string username, string password);
+
+
+        [OperationContract(IsOneWay = true)]
+        void LogOut(string username);
 
 
 
