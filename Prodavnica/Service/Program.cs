@@ -12,9 +12,11 @@ namespace Service
     {
         static void Main(string[] args)
         {
-            ServiceHost host = new ServiceHost(typeof(RacunService));
-            host.AddServiceEndpoint(typeof(IRacunService), new NetTcpBinding(), "net.tcp://localhost:9000");
+            ServiceHost host = new ServiceHost(typeof(BillService));
+            host.AddServiceEndpoint(typeof(IBillService), new NetTcpBinding(), "net.tcp://localhost:9000");
             host.Open();
+
+           
 
             Console.WriteLine("Racun services are now online. Waiting for requests...");
             Console.ReadLine();

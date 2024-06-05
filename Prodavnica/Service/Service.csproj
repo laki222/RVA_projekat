@@ -54,10 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202406042357183_InitialCreate.cs" />
+    <Compile Include="Migrations\202406042357183_InitialCreate.designer.cs">
+      <DependentUpon>202406042357183_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406050015377_InitialCreate1.cs" />
+    <Compile Include="Migrations\202406050015377_InitialCreate1.designer.cs">
+      <DependentUpon>202406050015377_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RacunDbContext.cs" />
-    <Compile Include="RacunService.cs" />
+    <Compile Include="BillDbContext.cs" />
+    <Compile Include="BillService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,6 +77,14 @@
       <Project>{DBA4685F-5D66-4EF5-BFE1-16A01213E2C0}</Project>
       <Name>Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202406042357183_InitialCreate.resx">
+      <DependentUpon>202406042357183_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406050015377_InitialCreate1.resx">
+      <DependentUpon>202406050015377_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

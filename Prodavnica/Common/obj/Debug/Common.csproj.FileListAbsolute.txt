@@ -4,3 +4,15 @@ C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.cspr
 C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.dll
 C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Common\obj\Debug\Common.pdb
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\Common.dll.config
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\Common.dll
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\Common.pdb
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\EntityFramework.dll
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\EntityFramework.xml
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\obj\Debug\Common.csproj.CopyComplete
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\obj\Debug\Common.dll
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Common\obj\Debug\Common.pdb
