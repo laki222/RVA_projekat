@@ -31,7 +31,7 @@ namespace Service
             using (var db = new BillDbContext())
             {
                 // Kreiraj novi račun i sačuvaj ga u bazi podataka
-                var newBill = new Bill();
+                var newBill = new Bill() { CreatedDate=DateTime.Now,Creator="test"};
                 db.Bills.Add(newBill);
                 db.SaveChanges();
                
@@ -77,11 +77,11 @@ namespace Service
 
         }
 
-        public bool DeleteBill(string name)
+        public bool DeleteBill(int billid)
         {
             using (var db = new BillDbContext())
             {
-                var bill = db.Bills.Include(b => b.BillProducts).FirstOrDefault(b => b.BillID == _currentBillId);
+                var bill = db.Bills.Include(b => b.BillProducts).FirstOrDefault(b => b.BillID == billid);
 
                 if (bill != null)
                 {
@@ -103,7 +103,7 @@ namespace Service
 
             using(var db = new BillDbContext())
             {
-                db.Products.Attach(clone.Product);
+                //db.Products.Attach(clone.Product);
                // clone.RacunID += " (Copy)";
                 db.Bills.Add(clone);
                 db.SaveChanges();
@@ -114,16 +114,23 @@ namespace Service
 
         }
 
-        public bool EditBill()
+        public bool EditBill(string creator,int id)
         {
             using (var db = new BillDbContext())
             {
-                Bill bill=SearchBill();
+                Bill bill=db.Bills.Find(id);
                 if (bill != null)
                 {
-                    bill.CreatedDate = DateTime.Now;
-                    // Update other properties as needed
-
+                    db.Bills.Remove(bill);
+                    db.SaveChanges() ;
+                    Bill bill1 = new Bill(); 
+                    bill1.BillID= id;
+                    bill1.CreatedDate = DateTime.Now;
+                    bill1.Creator=creator;
+                    bill1.BillProducts=bill.BillProducts;
+                    bill1.Price=bill.Price;
+                    bill1.Product=bill.Product;
+                    db.Bills.Add(bill1);
                     db.SaveChanges();
                     return true;
                 }
@@ -160,7 +167,7 @@ namespace Service
             using(var db = new BillDbContext())
             {
                 //logovanje ovde
-                return db.Bills.Include("Proizvod").ToList();
+                return db.Bills.ToList();
             }
         }
 
@@ -222,11 +229,11 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public Bill SearchBill()
+        public Bill SearchBill(int id)
         {
             using (var db = new BillDbContext())
             {
-                var bill = db.Bills.Include(b => b.BillProducts).FirstOrDefault(b => b.BillID == _currentBillId);
+                var bill = db.Bills.Include(b => b.BillProducts).FirstOrDefault(b => b.BillID == id);
 
                 if (bill != null)
                 {

@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="ICloneable.cs" />
     <Compile Include="IBillService.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\BillProducts.cs" />
     <Compile Include="Model\IUser.cs" />

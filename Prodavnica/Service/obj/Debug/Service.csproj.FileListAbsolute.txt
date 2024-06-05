@@ -8,10 +8,6 @@ C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Service\obj\Debug\Service.cs
 C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.CopyComplete
 C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Service\obj\Debug\Service.exe
 C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Service\obj\Debug\Service.pdb
-C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.AssemblyReference.cache
-C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
-C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.exe
-C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.pdb
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Service.exe.config
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Service.exe
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Service.pdb
@@ -22,7 +18,12 @@ C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Common
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Common.dll.config
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\EntityFramework.xml
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.CopyComplete
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.AssemblyReference.cache
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.Migrations.InitialCreate.resources
-C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.GenerateResource.cache
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.Migrations.InitialCreate1.resources
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.GenerateResource.cache
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.csproj.CopyComplete
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.exe
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.pdb
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.Migrations.Creator.resources

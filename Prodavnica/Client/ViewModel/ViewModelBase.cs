@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,6 +11,18 @@ namespace Client.ViewModel
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
+        protected static Logger ClientLogger;
+
+
+
+        public ViewModelBase()
+        {
+            if (ClientLogger == null)
+            {
+                ClientLogger = new Logger();
+                ClientLogger.AddTarget(new LoggerFileTarget("ClientActionsLog.txt"));
+            }
+        }
 
         protected virtual void OnPropertyChanged(string propertyName)
         {

@@ -38,7 +38,8 @@
                         BillID = c.Int(nullable: false, identity: true),
                         CreatedDate = c.DateTime(nullable: false),
                         Product_Name = c.String(maxLength: 128),
-                    })
+                        Creator = c.String(maxLength: 128),
+                })
                 .PrimaryKey(t => t.BillID)
                 .ForeignKey("dbo.Products", t => t.Product_Name)
                 .Index(t => t.Product_Name);

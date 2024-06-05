@@ -4,10 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
-        xmlns:views="clr-namespace:Client.View"
+		xmlns:views="clr-namespace:Client.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Library" Height="480" Width="800" MinWidth="640" MinHeight="480">
     <Grid>
-        <views:LoginView/>
+        <TabControl>
+            <TabItem Header="Main">
+                <views:HomeView/>
+            </TabItem>
+            <TabItem Header="Account">
+                           </TabItem>
+            <TabItem Header="Log">
+                <views:LogView/>
+            </TabItem>
+            <TabItem Header="Admin" Visibility="Visible">
+                <views:AdminView/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

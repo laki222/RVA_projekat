@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Client\obj\Debug\
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Client\obj\Debug\
 Client
 none
 false
 DEBUG;TRACE
-C:\Users\bojan\source\repos\RVA_projekat\Prodavnica\Client\App.xaml
-2-268177722
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Client\App.xaml
+9-508000234
 
-101704674677
-18-2123429828
-MainWindow.xaml;View\LoginView.xaml;
+25476398629
+201243977831
+LoginWindow.xaml;MainWindow.xaml;View\AccountView.xaml;View\AddProductToBillView.xaml;View\AdminView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\LogView.xaml;View\NewBillWindow.xaml;
 
 True
 

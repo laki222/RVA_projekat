@@ -1,0 +1,26 @@
+6/5/2024 4:18:29 PM [DEBUG]: Admin has created a new user with username test
+6/5/2024 4:21:15 PM [INFO]: Bill 6 successfully created.
+6/5/2024 4:27:01 PM [INFO]: Bill 7 successfully created.
+6/5/2024 4:29:00 PM [INFO]: Bill 7 duplicated.
+6/5/2024 4:35:26 PM [INFO]: Bill 6 deleted successfully.
+6/5/2024 4:35:29 PM [INFO]: Bill 7 deleted successfully.
+6/5/2024 4:35:33 PM [INFO]: Bill 8 successfully created.
+6/5/2024 4:45:15 PM [ERROR]: Bill testa could not be edited.
+6/5/2024 4:45:38 PM [ERROR]: Bill testaaa could not be edited.
+6/5/2024 4:46:09 PM [ERROR]: Bill testaa could not be edited.
+6/5/2024 4:52:19 PM [INFO]: Bill testaa successfully edited.
+6/5/2024 4:58:27 PM [INFO]: Bill testa successfully edited.
+6/5/2024 5:00:39 PM [INFO]: Bill testa successfully edited.
+6/5/2024 5:01:14 PM [INFO]: Bill test successfully edited.
+6/5/2024 5:11:08 PM [INFO]: Bill testaa successfully edited.
+6/5/2024 5:11:18 PM [INFO]: Bill testaa successfully edited.
+6/5/2024 5:12:33 PM [INFO]: Bill 11 successfully created.
+6/5/2024 5:12:52 PM [INFO]: Bill testtt successfully edited.
+6/5/2024 5:13:15 PM [INFO]: Bill 12 duplicated.
+6/5/2024 5:13:37 PM [INFO]: Bill 12 duplicated.
+6/5/2024 5:13:40 PM [INFO]: Bill 12 deleted successfully.
+6/5/2024 5:13:42 PM [INFO]: Bill 13 deleted successfully.
+6/5/2024 5:13:59 PM [INFO]: Bill 14 duplicated.
+6/5/2024 5:14:01 PM [INFO]: Bill 14 deleted successfully.
+6/5/2024 5:14:07 PM [INFO]: Bill testttaa successfully edited.
+6/5/2024 5:14:25 PM [INFO]: Bill 16 duplicated.

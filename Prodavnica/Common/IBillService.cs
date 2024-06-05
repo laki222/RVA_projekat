@@ -28,7 +28,7 @@ namespace Common
 
         [OperationContract]
 
-        bool EditBill();
+        bool EditBill(string creator,int id);
 
         [OperationContract]
         void AddProductToBill(string name, string manufacturer);
@@ -36,10 +36,10 @@ namespace Common
 
         [OperationContract]
 
-        bool DeleteBill(string name);
+        bool DeleteBill(int billid);
 
         [OperationContract]
-        Bill SearchBill();
+        Bill SearchBill(int id);
 
         [OperationContract]
         LogInInfo LogIn(string username, string password);

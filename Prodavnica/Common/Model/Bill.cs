@@ -14,8 +14,10 @@ namespace Common.Model
         public DateTime CreatedDate { get; set; }
         public List<BillProducts> BillProducts { get; set; }
         [Key]
+        
         public int BillID { get; set; }
 
+        public string Creator { get; set; }
         public Product Product { get; set; }
 
         public float Price { get; set; }
@@ -29,7 +31,7 @@ namespace Common.Model
             r.Product = Product;
             r.BillProducts = BillProducts;
             r.Price = Price;
-
+            r.Creator= Creator;
 
             return r;
         }
