@@ -91,7 +91,7 @@ namespace Client.Class
                 revert();
         }
     }
-/*
+
     enum ActionType
     {
         Edit,
@@ -102,7 +102,7 @@ namespace Client.Class
     class UndoRedoAction
     {
 
-    }*/
+    }
 
 
 

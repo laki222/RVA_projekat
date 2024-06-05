@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using Client.Class;
+using Common;
 using Common.Model;
 using System;
 using System.Collections.Generic;
@@ -16,34 +17,35 @@ namespace Service
     {
 
         private static List<string> loggedInUsers = new List<string>();
-        private int _currentBillId;
+        private Logger logger = new Logger();
 
-        
+
 
 
         public BillService()
         {
-            // ovde ce ici logger kad se bude implementirao
+            logger.AddTarget(new LoggerConsoleTarget());
+            logger.AddTarget(new LoggerFileTarget("LogData.txt"));
         }
 
-        public Bill CreateBill()
+        public Bill CreateBill(string creator)
         {
             using (var db = new BillDbContext())
             {
                 // Kreiraj novi račun i sačuvaj ga u bazi podataka
-                var newBill = new Bill() { CreatedDate=DateTime.Now,Creator="test"};
+                var newBill = new Bill() { CreatedDate=DateTime.Now,Creator=creator };
                 db.Bills.Add(newBill);
                 db.SaveChanges();
-               
-                // Vraćamo ID novog računa
+
+                logger.Log("Bill " + newBill.BillID + "  successfully created.", LogLevel.Info);
                 return newBill;
             }
         }
-        public void AddProductToBill(string name, string manufacturer)
+        public void AddProductToBill(int id,string name, string manufacturer)
         {
             using (var db = new BillDbContext())
             {
-                var bill = db.Bills.Find(_currentBillId);
+                var bill = db.Bills.Find(id);
                 if (bill == null) return;
 
                 var product = db.Products.FirstOrDefault(p => p.Name == name && p.Manufacturer == manufacturer);
@@ -51,10 +53,11 @@ namespace Service
 
                 db.BillProducts.Add(new BillProducts
                 {
-                    BillId = _currentBillId,
+                    BillId = id,
                     ProductName = product.Name,
                     Price = product.Price
                 });
+                logger.Log("Product " + name + "  successfully added.", LogLevel.Info);
                 db.SaveChanges();
             }
         }
@@ -72,7 +75,7 @@ namespace Service
                 db.SaveChanges();
             }
 
-            //loger
+            logger.Log("User " + username + "  successfully created.", LogLevel.Info);
             return true;
 
         }
@@ -88,8 +91,10 @@ namespace Service
                     db.BillProducts.RemoveRange(bill.BillProducts);
                     db.Bills.Remove(bill);
                     db.SaveChanges();
+                    logger.Log("Bill " + billid + "  successfully deleted.", LogLevel.Info);
                     return true;
                 }
+                logger.Log("Bill " + billid + "  unsuccessfully deleted.", LogLevel.Info);
                 return false;
             }
          }
@@ -109,7 +114,7 @@ namespace Service
                 db.SaveChanges();
 
 
-                //ovde logovanje
+                logger.Log("Bill " + racun.BillID + "  successfully cloned.", LogLevel.Info);
             }
 
         }
@@ -132,8 +137,10 @@ namespace Service
                     bill1.Product=bill.Product;
                     db.Bills.Add(bill1);
                     db.SaveChanges();
+                    logger.Log("Bill " + id + "  successfully edited.", LogLevel.Info);
                     return true;
                 }
+                logger.Log("Bill " + id + " is not found.", LogLevel.Info);
                 return false;
 
             }
@@ -156,7 +163,7 @@ namespace Service
                 user.FirstName = firstName;
                 user.LastName = lastName;
 
-                //logger.Log("Account info of " + username + " edited.", LogLevel.Debug);
+                logger.Log("Account info of " + username + " edited.", LogLevel.Debug);
 
                 db.SaveChanges();
             }
@@ -167,6 +174,23 @@ namespace Service
             using(var db = new BillDbContext())
             {
                 //logovanje ovde
+
+                var bill = db.Bills.ToList();
+
+                foreach (var item in bill)
+                {
+                    var products=GetAllProductById(item.BillID);
+                    float temp=0;
+                    foreach (var p in products)
+                    {
+                        temp+= p.Price;
+                    }
+
+                    item.Price = temp;
+
+                }
+                logger.Log("Bill data querried.", LogLevel.Debug);
+
                 return db.Bills.ToList();
             }
         }
@@ -186,7 +210,7 @@ namespace Service
             if (user == null)
                 return null;
 
-            //logger.Log("User info of " + username + " querried.", LogLevel.Debug);
+            logger.Log("User info of " + username + " querried.", LogLevel.Debug);
 
             return new RegisteredCustomer() { Username = user.Username, FirstName = user.FirstName, LastName = user.LastName };
         }
@@ -212,22 +236,43 @@ namespace Service
 
                 if (user.Password == password)
                 {
-                    //ovde treba logovati
+                    logger.Log("User " + username + " logged in.", LogLevel.Info);
                     loggedInUsers.Add(username);
 
                     return LogInInfo.Sucess;
                 }
 
                 // wrong password
-               // ovde ide logovanje
+                logger.Log("Wrong password.", LogLevel.Info);
                 return LogInInfo.WrongUserOrPass;
             }
         }
 
         public void LogOut(string username)
         {
-            throw new NotImplementedException();
+            logger.Log("User " + username + " has disconnected.", LogLevel.Info);
         }
+
+        public bool CheckIfAdmin(string username)
+        {
+            using (var db = new BillDbContext())
+            {
+                var admins = db.Admins.Include(b => b.Username).FirstOrDefault(b => b.Username == username);
+
+                if (admins != null)
+                {
+                    logger.Log("User " + username + " is admin.", LogLevel.Info);
+                    return true;
+                }
+
+                logger.Log("User " + username + " is not admin.", LogLevel.Info);
+
+                return false;
+            }
+
+
+        }
+
 
         public Bill SearchBill(int id)
         {
@@ -237,10 +282,44 @@ namespace Service
 
                 if (bill != null)
                 {
+                    logger.Log("Bill " + id + " is found.", LogLevel.Info);
                     return bill;
                 }
+
+                logger.Log("Bill " + id + " is not found.", LogLevel.Info);
                 return null;
             }
-        }    
         }
+
+        public Product CreateProduct(string billid, string name, string manufacturer, string price)
+        {
+            using (var db = new BillDbContext())
+            {
+                
+                Product p = new Product() { Name = name,BillId=billid, Manufacturer = manufacturer, Price = float.Parse(price), IsDeleted = false };
+                db.Products.Add(p);
+                db.SaveChanges();
+                logger.Log("Product " + name + " created.", LogLevel.Info);
+                return p;
+            }
+        }
+
+        public List<Product>GetAllProductById(int id)
+        {
+            using (var db = new BillDbContext())
+            {
+                var products = db.Products.Where(p => p.BillId == id.ToString()).ToList();
+                
+
+                if (products != null)
+                {
+                    logger.Log("Product with billId:" + id + " exist.", LogLevel.Info);
+                    return products;
+                }
+                logger.Log("Product with billId:" + id + "not exist.", LogLevel.Info);
+                return null;
+            }
+        }
+
+    }
 }

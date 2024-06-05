@@ -4,16 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
+         xmlns:classes="clr-namespace:Client.Class"
 		xmlns:views="clr-namespace:Client.View"
         mc:Ignorable="d"
         Title="Library" Height="480" Width="800" MinWidth="640" MinHeight="480">
+   
     <Grid>
         <TabControl>
             <TabItem Header="Main">
                 <views:HomeView/>
             </TabItem>
             <TabItem Header="Account">
-                           </TabItem>
+                <views:AccountView/>
+            </TabItem>
             <TabItem Header="Log">
                 <views:LogView/>
             </TabItem>

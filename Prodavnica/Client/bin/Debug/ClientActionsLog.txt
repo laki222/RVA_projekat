@@ -24,3 +24,36 @@
 6/5/2024 5:14:01 PM [INFO]: Bill 14 deleted successfully.
 6/5/2024 5:14:07 PM [INFO]: Bill testttaa successfully edited.
 6/5/2024 5:14:25 PM [INFO]: Bill 16 duplicated.
+6/5/2024 10:36:41 PM [INFO]: Product t successfully created.
+6/5/2024 10:39:38 PM [INFO]: Product h successfully created.
+6/5/2024 10:56:07 PM [INFO]: Bill 16 deleted successfully.
+6/5/2024 10:56:08 PM [INFO]: Bill 17 deleted successfully.
+6/5/2024 10:56:24 PM [INFO]: Bill 18 duplicated.
+6/5/2024 10:56:27 PM [INFO]: Bill 18 duplicated.
+6/5/2024 11:13:52 PM [INFO]: Product ha successfully created.
+6/5/2024 11:17:37 PM [INFO]: Product test successfully created.
+6/5/2024 11:24:30 PM [INFO]: Product provear successfully created.
+6/5/2024 11:52:16 PM [INFO]: Account test successfully edited.
+6/5/2024 11:52:49 PM [INFO]: Bill 18 deleted successfully.
+6/5/2024 11:52:50 PM [INFO]: Bill 19 deleted successfully.
+6/5/2024 11:52:51 PM [INFO]: Bill 20 deleted successfully.
+6/5/2024 11:57:38 PM [INFO]: Bill 22 successfully created.
+6/6/2024 12:01:44 AM [INFO]: Bill 22 deleted successfully.
+6/6/2024 12:01:44 AM [INFO]: Bill 23 successfully created.
+6/6/2024 12:02:37 AM [INFO]: Bill 24 successfully created.
+6/6/2024 12:27:12 AM [INFO]: Product aaaaaaa successfully created.
+6/6/2024 12:27:23 AM [INFO]: Bill 23 duplicated.
+6/6/2024 12:27:39 AM [INFO]: Bill 24 deleted successfully.
+6/6/2024 12:27:40 AM [INFO]: Bill 25 deleted successfully.
+6/6/2024 12:49:08 AM [INFO]: Bill 26 successfully created.
+6/6/2024 12:54:47 AM [INFO]: Bill 21 duplicated.
+6/6/2024 1:08:36 AM [INFO]: Product ss successfully created.
+6/6/2024 1:27:10 AM [INFO]: Product tes successfully created.
+6/6/2024 1:33:01 AM [INFO]: Bill 28 successfully created.
+6/6/2024 1:34:26 AM [INFO]: Bill 29 successfully created.
+6/6/2024 1:35:58 AM [INFO]: Bill 30 successfully created.
+6/6/2024 1:36:10 AM [INFO]: Bill 30 deleted successfully.
+6/6/2024 1:37:12 AM [INFO]: Bill 31 successfully created.
+6/6/2024 1:39:01 AM [INFO]: Bill 32 successfully created.
+6/6/2024 1:44:00 AM [INFO]: Bill 33 successfully created.
+6/6/2024 1:44:19 AM [INFO]: Bill 34 successfully created.

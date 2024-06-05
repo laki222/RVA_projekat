@@ -21,10 +21,10 @@
         <ToolBarTray IsLocked="True">
             <ToolBar>
                 <Button 
-					Content="New Book"
+					Content="New Bill"
 					Command="{Binding NewBillCommand}"/>
                 <Button 
-					Content="Edit Book"
+					Content="Edit Bill"
 					Command="{Binding EditBillCommand}"/>
                 <Button 
 				Content="Add product to Bill"
@@ -47,6 +47,11 @@
                 <Button 
 					Content="Refresh"
 					Command="{Binding RefreshCommand}" ToolTip="Refresh"/>
+                <Separator/>
+                <Button 
+		Content="Logout"
+		Command="{Binding LogoutCommand}"/>
+
             </ToolBar>
         </ToolBarTray>
 
@@ -88,11 +93,12 @@
 
             <DataGrid 
     Grid.Row="0"
-    ItemsSource="{Binding SelectedBill.BillProducts}"
+    ItemsSource="{Binding Products}"
     AutoGenerateColumns="False"
     IsReadOnly="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="*"/>
+                    <DataGridTextColumn Header="Product Name" Binding="{Binding Name}" Width="*"/>
+                    <DataGridTextColumn Header="Manufacturer Name" Binding="{Binding Manufacturer}" Width="*"/>
                     <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -103,13 +109,13 @@
 					Content="Filter by"
 					FontWeight="Bold"/>
                 <TextBlock
-					Text="Product name"
+					Text="Creator name"
 					Margin="10, 0, 0, 0"/>
                 <TextBox
 					Margin="10, 5"
 					Text="{Binding ProductTextBox}"/>
                 <TextBlock
-					Text="Price"
+					Text="BillId"
 					Margin="10, 0, 0, 0"/>
                 <TextBox
 					Margin="10, 5"

@@ -11,7 +11,7 @@ namespace Common.Model
     public class BillProducts
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Opciono, ukoliko želite automatsko generisanje ključa
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int Id { get; set; }
         public int BillId { get; set; }     
         public string ProductName { get; set; }      

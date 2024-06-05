@@ -24,14 +24,14 @@ namespace Common
         List<Bill> GetAllBills();
 
         [OperationContract]
-        Bill CreateBill();
+        Bill CreateBill(string creator);
 
         [OperationContract]
 
         bool EditBill(string creator,int id);
 
         [OperationContract]
-        void AddProductToBill(string name, string manufacturer);
+        void AddProductToBill(int id,string name, string manufacturer);
 
 
         [OperationContract]
@@ -63,6 +63,14 @@ namespace Common
         [OperationContract(IsOneWay = true)]
 
         void DoubleBill(Bill racun);
+        [OperationContract]
+        Product CreateProduct(string billid,string name,string manufacturer,string price);
+
+        [OperationContract]
+        List<Product> GetAllProductById(int id);
+
+        [OperationContract]
+        bool CheckIfAdmin(string username);
 
     }
 }

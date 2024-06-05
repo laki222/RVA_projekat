@@ -18,10 +18,12 @@
 
         protected override void Seed(Service.BillDbContext context)
         {
+            BillService billService = new BillService();
+            Bill bill = billService.CreateBill("Lazar");
             // Authors
             IList<Product> defaultProducts = new List<Product>();
-            Product bananica = new Product() { Name = "Krem bananica", Price = 25, Manufacturer = "Stark", IsDeleted = false };
-            Product cips = new Product() { Name = "Cips", Price = 70, Manufacturer = "Marbo", IsDeleted = false };
+            Product bananica = new Product() { Name = "Krem bananica", Price = 25, Manufacturer = "Stark",BillId=bill.BillID.ToString(), IsDeleted = false };
+            Product cips = new Product() { Name = "Cips", Price = 70, Manufacturer = "Marbo",BillId = bill.BillID.ToString(), IsDeleted = false };
             
             defaultProducts.Add(bananica);
             defaultProducts.Add(cips) ;
@@ -35,8 +37,7 @@
             // Admins
             context.Admins.AddOrUpdate(new Admin() { FirstName = "Lazar", LastName = "Brankovic", Username = "admin", Password = "admin" });
 
-            BillService billService= new BillService();
-            Bill bill= billService.CreateBill();
+            
 
 
             IList<BillProducts> defaultBill = new List<BillProducts>();

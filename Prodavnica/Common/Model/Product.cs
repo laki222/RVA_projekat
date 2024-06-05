@@ -10,6 +10,8 @@ namespace Common.Model
 {
     public class Product
     {
+        public string BillId {  get; set; }
+
         [Key]
         public string Name { get; set; }
         public string Manufacturer { get; set; }

@@ -66,6 +66,10 @@
     <Compile Include="Migrations\202406051412129_Creator.designer.cs">
       <DependentUpon>202406051412129_Creator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406052046065_Product+Billid.cs" />
+    <Compile Include="Migrations\202406052046065_Product+Billid.designer.cs">
+      <DependentUpon>202406052046065_Product+Billid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +81,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Client\Client.csproj">
+      <Project>{0B87DB6D-B21B-43C4-8E83-CC138A19BBA8}</Project>
+      <Name>Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{DBA4685F-5D66-4EF5-BFE1-16A01213E2C0}</Project>
       <Name>Common</Name>
@@ -91,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406051412129_Creator.resx">
       <DependentUpon>202406051412129_Creator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406052046065_Product+Billid.resx">
+      <DependentUpon>202406052046065_Product+Billid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

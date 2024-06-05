@@ -27,3 +27,7 @@ C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Servic
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.exe
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.pdb
 C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.Migrations.Creator.resources
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\obj\Debug\Service.Migrations.ProductBillid.resources
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Client.exe
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Client.pdb
+C:\Users\Lazar\Desktop\RVA_PROJ\RVA_projekat\Prodavnica\Service\bin\Debug\Client.exe.config
